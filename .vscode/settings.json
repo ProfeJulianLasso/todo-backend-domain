@@ -1,0 +1,26 @@
+{
+  "iridium.npm.packageManager": "npm",
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "explorer.fileNesting.patterns": {
+    "package.json": ".*,*.json,*.yaml,*yml,*.js,+.json,*.md,Gemfile,*.properties,*.lock",
+    "*.d.ts": "$(capture).js,$(capture).js.map",
+  },
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "pnpm-lock.yaml",
+    ".eslintrc.json"
+  ],
+  "cSpell.words": [
+    "commitlint",
+  ],
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.quoteStyle": "single"
+}

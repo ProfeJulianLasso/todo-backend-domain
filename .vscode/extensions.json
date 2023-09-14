@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vivaxy.vscode-conventional-commits",
+    "dbaeumer.vscode-eslint",
+    "visualstudioexptteam.vscodeintellicode",
+    "orta.vscode-jest",
+    "christian-kohler.path-intellisense",
+    "sonarsource.sonarlint-vscode"
+  ]
+}
