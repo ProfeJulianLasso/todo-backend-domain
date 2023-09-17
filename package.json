@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "",
 	"main": "app.js",
+  "license": "MIT",
 	"scripts": {
 		"start": "node -r tsconfig-paths/register dist/app.js",
 		"test": "jest",
