@@ -26,29 +26,29 @@ export class User implements UserType {
     this.toDos = user.toDos as ToDo[];
   }
 
-  create = (): this => {
+  create(): this {
     if (!this.userId) this.userId = new UserIdValueObject(randomUUID());
     this.status = new StatusValueObject(true);
     this.toDos = [];
     return this;
-  };
+  }
 
-  update = (user: Partial<UserType>): this => {
+  update(user: Partial<UserType>): this {
     if (user.name) this.name = user.name;
     if (user.email) this.email = user.email;
     if (user.password) this.password = user.password;
     return this;
-  };
+  }
 
-  disable = (): this => {
+  disable(): this {
     this.status = new StatusValueObject(false);
     this.toDos?.forEach(toDo => toDo.disable());
     return this;
-  };
+  }
 
-  enable = (): this => {
+  enable(): this {
     this.status = new StatusValueObject(true);
     this.toDos?.forEach(toDo => toDo.enable());
     return this;
-  };
+  }
 }
