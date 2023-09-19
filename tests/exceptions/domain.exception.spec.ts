@@ -1,4 +1,4 @@
-import { DomainException, ValueObjectExceptionType } from '../../src';
+import { DomainException, ValueObjectExceptionInterface } from '../../src';
 
 describe('DomainException', () => {
   it('should get the message "invalid data"', () => {
@@ -22,13 +22,13 @@ describe('DomainException', () => {
         field: 'userId',
         message: 'Invalid userId',
       },
-    ] as ValueObjectExceptionType[];
+    ] as ValueObjectExceptionInterface[];
     const expectedDetails = [
       {
         field: 'userId',
         message: 'Invalid userId',
       },
-    ] as ValueObjectExceptionType[];
+    ] as ValueObjectExceptionInterface[];
     const exception = new DomainException(messageForException, details);
 
     // Act

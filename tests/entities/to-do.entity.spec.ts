@@ -5,7 +5,7 @@ import {
   ToDoDescriptionValueObject,
   ToDoIdValueObject,
   ToDoTitleValueObject,
-  ToDoType,
+  ToDoInterface,
   User,
   UserEmailValueObject,
   UserIdValueObject,
@@ -44,7 +44,7 @@ describe('ToDoEntity', () => {
       description,
       completed,
       status,
-    } as ToDoType;
+    } as ToDoInterface;
 
     // Act
     const toDo = new ToDo(data);
@@ -63,7 +63,7 @@ describe('ToDoEntity', () => {
         description,
         completed,
         status,
-      } as ToDoType;
+      } as ToDoInterface;
 
       // Act
       const toDo = new ToDo(data);
@@ -82,7 +82,7 @@ describe('ToDoEntity', () => {
         description,
         completed,
         status,
-      } as ToDoType;
+      } as ToDoInterface;
 
       // Act
       const toDo = new ToDo(data);
@@ -105,12 +105,12 @@ describe('ToDoEntity', () => {
         description,
         completed,
         status,
-      } as ToDoType;
+      } as ToDoInterface;
       const updatedData = {
         title: new ToDoTitleValueObject('updated title'),
         description: new ToDoDescriptionValueObject('updated description'),
         completed: new CompletedValueObject(true),
-      } as ToDoType;
+      } as ToDoInterface;
 
       // Act
       const toDo = new ToDo(data);
@@ -133,7 +133,7 @@ describe('ToDoEntity', () => {
         description,
         completed,
         status,
-      } as ToDoType;
+      } as ToDoInterface;
 
       // Act
       const toDo = new ToDo(data);
@@ -153,7 +153,7 @@ describe('ToDoEntity', () => {
         description,
         completed: new CompletedValueObject(true),
         status,
-      } as ToDoType;
+      } as ToDoInterface;
 
       // Act
       const toDo = new ToDo(data);
@@ -173,7 +173,7 @@ describe('ToDoEntity', () => {
         description,
         completed,
         status: new StatusValueObject(false),
-      } as ToDoType;
+      } as ToDoInterface;
 
       // Act
       const toDo = new ToDo(data);
@@ -193,7 +193,7 @@ describe('ToDoEntity', () => {
         description,
         completed,
         status,
-      } as ToDoType;
+      } as ToDoInterface;
 
       // Act
       const toDo = new ToDo(data);

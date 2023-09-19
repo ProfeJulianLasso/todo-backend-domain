@@ -9,7 +9,7 @@ import {
   UserIdValueObject,
   UserNameValueObject,
   UserPasswordValueObject,
-  UserType,
+  UserInterface,
 } from '../../src';
 
 describe('UserEntity', () => {
@@ -35,7 +35,7 @@ describe('UserEntity', () => {
       email: new UserEmailValueObject(email),
       password: new UserPasswordValueObject(password),
       toDos,
-    } as UserType;
+    } as UserInterface;
 
     // Act
     const user = new User(data);
@@ -54,7 +54,7 @@ describe('UserEntity', () => {
         name: new UserNameValueObject(name),
         email: new UserEmailValueObject(email),
         password: new UserPasswordValueObject(password),
-      } as UserType;
+      } as UserInterface;
 
       // Act
       const user = new User(data);
@@ -74,7 +74,7 @@ describe('UserEntity', () => {
         name: new UserNameValueObject(name),
         email: new UserEmailValueObject(email),
         password: new UserPasswordValueObject(password),
-      } as UserType;
+      } as UserInterface;
 
       // Act
       const user = new User(data);
@@ -101,12 +101,12 @@ describe('UserEntity', () => {
         name: new UserNameValueObject('updated name'),
         email: new UserEmailValueObject(email),
         password: new UserPasswordValueObject(password),
-      } as UserType;
+      } as UserInterface;
       const newData = {
         name: newName,
         email: newEmail,
         password: newPass,
-      } as UserType;
+      } as UserInterface;
 
       // Act
       const user = new User(currentData);
@@ -140,7 +140,7 @@ describe('UserEntity', () => {
         email: new UserEmailValueObject(email),
         password: new UserPasswordValueObject(password),
         toDos,
-      } as UserType;
+      } as UserInterface;
 
       // Act
       const user = new User(currentData);
@@ -172,7 +172,7 @@ describe('UserEntity', () => {
         email: new UserEmailValueObject(email),
         password: new UserPasswordValueObject(password),
         toDos,
-      } as UserType;
+      } as UserInterface;
 
       // Act
       const user = new User(currentData);
