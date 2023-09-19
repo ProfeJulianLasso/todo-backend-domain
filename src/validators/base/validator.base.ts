@@ -1,17 +1,17 @@
-import { ValueObjectExceptionType } from '../../types';
+import { ValueObjectExceptionInterface } from '../../interfaces';
 
 export abstract class ValidatorBase {
-  private _errors: ValueObjectExceptionType[];
+  private _errors: ValueObjectExceptionInterface[];
 
   constructor() {
-    this._errors = new Array<ValueObjectExceptionType>();
+    this._errors = new Array<ValueObjectExceptionInterface>();
   }
 
-  getErrors(): ValueObjectExceptionType[] {
+  getErrors(): ValueObjectExceptionInterface[] {
     return this._errors;
   }
 
-  protected set error(error: ValueObjectExceptionType) {
+  protected set error(error: ValueObjectExceptionInterface) {
     this._errors.push(error);
   }
 

@@ -7,11 +7,11 @@ import {
   ToDoTitleValueObject,
 } from '../value-objects';
 
-export type ToDoType = {
+export interface ToDoInterface {
   toDoId: ToDoIdValueObject;
   user: User;
   title: ToDoTitleValueObject;
   description?: ToDoDescriptionValueObject;
   completed: CompletedValueObject;
   status: StatusValueObject;
-};
+}

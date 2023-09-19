@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto';
-import { ToDoType } from '../types';
+import { ToDoInterface } from '../interfaces';
 import {
   CompletedValueObject,
   StatusValueObject,
@@ -9,7 +9,7 @@ import {
 } from '../value-objects';
 import { User } from './user.entity';
 
-export class ToDo implements ToDoType {
+export class ToDo implements ToDoInterface {
   toDoId: ToDoIdValueObject;
   user: User;
   title: ToDoTitleValueObject;
@@ -17,7 +17,7 @@ export class ToDo implements ToDoType {
   completed: CompletedValueObject;
   status: StatusValueObject;
 
-  constructor(toDo: Partial<ToDoType>) {
+  constructor(toDo: Partial<ToDoInterface>) {
     this.toDoId = toDo.toDoId as ToDoIdValueObject;
     this.user = toDo.user as User;
     this.title = toDo.title as ToDoTitleValueObject;
@@ -34,7 +34,7 @@ export class ToDo implements ToDoType {
     return this;
   }
 
-  update(toDo: Partial<ToDoType>): this {
+  update(toDo: Partial<ToDoInterface>): this {
     if (toDo.title) this.title = toDo.title;
     if (toDo.description) this.description = toDo.description;
     if (toDo.completed) this.completed = toDo.completed;

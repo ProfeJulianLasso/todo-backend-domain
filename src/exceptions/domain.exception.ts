@@ -1,9 +1,11 @@
-import { ValueObjectExceptionType } from '../types';
+import { ValueObjectExceptionInterface } from '../interfaces';
 
 export class DomainException extends Error {
   constructor(
     message: string,
-    readonly details?: ValueObjectExceptionType | ValueObjectExceptionType[]
+    readonly details?:
+      | ValueObjectExceptionInterface
+      | ValueObjectExceptionInterface[]
   ) {
     super(message);
   }

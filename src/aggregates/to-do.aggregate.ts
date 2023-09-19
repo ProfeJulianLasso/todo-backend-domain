@@ -1,29 +1,19 @@
-import { ToDo, User } from '../entities';
-import {
-  ToDoDescriptionValueObject,
-  ToDoIdValueObject,
-  ToDoTitleValueObject,
-} from '../value-objects';
+import { ToDo } from '../entities';
+import { CompleteToDoInterface, CreateToDoInterface } from '../interfaces';
 import { AggregateBase } from './base';
 
 export class ToDoAggregate extends AggregateBase {
-  createToDo({
-    toDoId,
-    title,
-    description,
-    user,
-  }: {
-    toDoId?: ToDoIdValueObject;
-    title: ToDoTitleValueObject;
-    description?: ToDoDescriptionValueObject;
-    user: User;
-  }): ToDo {
-    const toDo = new ToDo({ toDoId, title, description });
-    return toDo.create(user);
+  createToDo(data: CreateToDoInterface): ToDo {
+    const toDo = new ToDo({
+      toDoId: data.toDoId,
+      title: data.title,
+      description: data.description,
+    });
+    return toDo.create(data.user);
   }
 
-  completeToDo({ toDoId }: { toDoId: ToDoIdValueObject }): ToDo {
-    const toDo = new ToDo({ toDoId });
+  completeToDo(data: CompleteToDoInterface): ToDo {
+    const toDo = new ToDo(data);
     return toDo.complete();
   }
 }

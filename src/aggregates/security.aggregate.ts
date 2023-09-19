@@ -1,22 +1,10 @@
 import { User } from '../entities';
-import {
-  UserEmailValueObject,
-  UserNameValueObject,
-  UserPasswordValueObject,
-} from '../value-objects';
+import { CreateUserInterface } from '../interfaces';
 import { AggregateBase } from './base';
 
 export class SecurityAggregate extends AggregateBase {
-  createUser({
-    name,
-    email,
-    password,
-  }: {
-    name: UserNameValueObject;
-    email: UserEmailValueObject;
-    password: UserPasswordValueObject;
-  }): User {
-    const user = new User({ name, email, password });
+  createUser(data: CreateUserInterface): User {
+    const user = new User(data);
     return user.create();
   }
 }

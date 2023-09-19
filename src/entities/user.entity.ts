@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { UserType } from '../types';
+import { UserInterface } from '../interfaces';
 import {
   StatusValueObject,
   UserEmailValueObject,
@@ -9,7 +9,7 @@ import {
 } from '../value-objects';
 import { ToDo } from './to-do.entity';
 
-export class User implements UserType {
+export class User implements UserInterface {
   userId: UserIdValueObject;
   name: UserNameValueObject;
   email: UserEmailValueObject;
@@ -17,7 +17,7 @@ export class User implements UserType {
   status: StatusValueObject;
   toDos?: ToDo[];
 
-  constructor(user: Partial<UserType>) {
+  constructor(user: Partial<UserInterface>) {
     this.userId = user.userId as UserIdValueObject;
     this.name = user.name as UserNameValueObject;
     this.email = user.email as UserEmailValueObject;
@@ -33,7 +33,7 @@ export class User implements UserType {
     return this;
   }
 
-  update(user: Partial<UserType>): this {
+  update(user: Partial<UserInterface>): this {
     if (user.name) this.name = user.name;
     if (user.email) this.email = user.email;
     if (user.password) this.password = user.password;

@@ -1,9 +1,9 @@
-import { QueryOptionsType } from '../../types';
+import { QueryOptionsInterface } from '../../interfaces';
 
-export interface IRepositoryBase<Entity> {
-  findAll(options?: QueryOptionsType<Entity>): Promise<Entity[]>;
-  findBy(options: QueryOptionsType<Entity>): Promise<Entity>;
-  create(entity: Entity): Promise<Entity>;
-  update(id: string, entity: Entity): Promise<Entity>;
-  delete(id: string, soft?: boolean): Promise<boolean>;
+export abstract class RepositoryBase<Entity> {
+  abstract findAll(options?: QueryOptionsInterface<Entity>): Promise<Entity[]>;
+  abstract findBy(options: QueryOptionsInterface<Entity>): Promise<Entity>;
+  abstract create(entity: Entity): Promise<Entity>;
+  abstract update(id: string, entity: Entity): Promise<Entity>;
+  abstract delete(id: string, soft?: boolean): Promise<boolean>;
 }

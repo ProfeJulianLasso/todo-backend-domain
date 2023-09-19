@@ -1,11 +1,11 @@
-import { ValueObjectExceptionType } from '../../types';
+import { ValueObjectExceptionInterface } from '../../interfaces';
 
 export abstract class ValueObjectBase<Type> {
-  protected _error!: ValueObjectExceptionType;
+  protected _error!: ValueObjectExceptionInterface;
 
   constructor(public readonly value: Type) {}
 
-  get error(): ValueObjectExceptionType {
+  get error(): ValueObjectExceptionInterface {
     return this._error;
   }
 
@@ -14,7 +14,7 @@ export abstract class ValueObjectBase<Type> {
     return this.value === valueObject.value;
   }
 
-  protected set error(error: ValueObjectExceptionType) {
+  protected set error(error: ValueObjectExceptionInterface) {
     this._error = error;
   }
 
