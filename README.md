@@ -2,7 +2,7 @@
 
 Esto es un pequeño proyecto de arquitectura limpia en 3 paquetes y este es tan sólo el primer paquete de los tres, esto es la **capa de dominio**.
 
-El ejercicio trata de un simple ToDo con usuario y contraseña. Lo nombres que uso aveces pueden parecer extraídos de DDD (Domain-Driven Design).
+El ejercicio trata de un simple ToDo con usuario y contraseña. Los nombres que uso aveces pueden parecer extraídos de DDD (Domain-Driven Design).
 
 ![Clean Architecture](./assets/clean_architecture.jpg)
 
