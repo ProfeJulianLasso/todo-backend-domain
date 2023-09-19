@@ -1,4 +1,5 @@
 {
+  "jest.autoRun": "off",
   "iridium.npm.packageManager": "npm",
   "files.exclude": {
     "**/node_modules": true
@@ -22,5 +23,14 @@
   ],
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
-  "typescript.preferences.quoteStyle": "single"
+  "typescript.preferences.quoteStyle": "single",
+  "duplicatedCode.options": {
+    "minTokens": 90,
+    "minLines": 5,
+    "maxLines": 1000,
+    "absolute": true,
+    "silent": true,
+    "gitignore": true,
+    "noSymlinks": false
+  }
 }
