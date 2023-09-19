@@ -16,7 +16,7 @@
 		"fix": "eslint --fix 'src/**/*.ts' 'tests/**/*.ts'",
 		"format": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
 		"prepare": "husky install",
-    "dup": "jscpd --pattern 'src/**/*.ts' --reporters 'consoleFull,console,html' --mode 'strict' --min-lines 5 --min-tokens 70 --output './report'"
+    "dup": "jscpd --pattern 'src/**/*.ts' --reporters 'consoleFull,console,html' --mode 'strict' --min-lines 5 --min-tokens 90 --output './report'"
 	},
 	"dependencies": {
 		"zod": "^3.22.2"

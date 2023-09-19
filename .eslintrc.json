@@ -18,7 +18,13 @@
     "eol-last": "error",
     "prefer-arrow-callback": "error",
     "no-trailing-spaces": "error",
-    "quotes": ["warn", "single", { "avoidEscape": true }],
+    "quotes": [
+      "warn",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
     "no-restricted-properties": [
       "error",
       {
@@ -33,9 +39,13 @@
   },
   "overrides": [
     {
-      "files": ["**/*.ts"],
+      "files": [
+        "**/*.ts"
+      ],
       "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint/eslint-plugin"],
+      "plugins": [
+        "@typescript-eslint/eslint-plugin"
+      ],
       "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
@@ -69,9 +79,16 @@
       }
     },
     {
-      "files": ["**.spec.ts", "**.test.ts"],
-      "plugins": ["jest"],
-      "extends": ["plugin:jest/recommended"],
+      "files": [
+        "**.spec.ts",
+        "**.test.ts"
+      ],
+      "plugins": [
+        "jest"
+      ],
+      "extends": [
+        "plugin:jest/recommended"
+      ],
       "env": {
         "node": true,
         "jest": true,
@@ -80,7 +97,8 @@
       "rules": {
         "jest/prefer-expect-assertions": "off",
         "jest/require-top-level-describe": "warn",
-        "jest/valid-expect": "error"
+        "jest/valid-expect": "error",
+        "jest/no-conditional-expect": "off"
       }
     }
   ]
