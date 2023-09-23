@@ -4,11 +4,32 @@ import { ConfigValueObjectBase } from './base';
 const FIELD_NAME = 'email';
 const MAX_LENGTH = 500;
 
+/**
+ * Value object for email
+ *
+ * @export
+ * @class UserEmailValueObject
+ * @extends {ConfigValueObjectBase<string>}
+ */
 export class UserEmailValueObject extends ConfigValueObjectBase<string> {
+  /**
+   * Configuration for value object validations
+   *
+   * @protected
+   * @memberof UserEmailValueObject
+   */
   protected configure(): void {
     this.config = { fieldName: FIELD_NAME };
   }
 
+  /**
+   * Getting the validation scheme of a value object of type email
+   *
+   * @protected
+   * @template T Type of the schema
+   * @return {*}  {T} Validation scheme of a value object of type email
+   * @memberof UserEmailValueObject
+   */
   protected getSchema<T>(): T {
     return z
       .string({

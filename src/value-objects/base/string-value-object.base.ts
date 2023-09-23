@@ -1,7 +1,23 @@
 import { z } from 'zod';
 import { ConfigValueObjectBase } from './config-value-object.base';
 
+/**
+ * Base class for configuring string value objects
+ *
+ * @export
+ * @abstract
+ * @class StringValueObjectBase
+ * @extends {ConfigValueObjectBase<string>}
+ */
 export abstract class StringValueObjectBase extends ConfigValueObjectBase<string> {
+  /**
+   * Getting the validation schema of a string type value object
+   *
+   * @protected
+   * @template T Type of the schema
+   * @return {*}  {T} Validation schema for a string type value object
+   * @memberof StringValueObjectBase
+   */
   protected getSchema<T>(): T {
     this.configure();
     const { fieldName, minLength, maxLength, regex } = this.config as {
