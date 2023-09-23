@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { UserInterface } from '../interfaces';
+import { UserInterface } from '../common';
 import {
   StatusValueObject,
   UserEmailValueObject,

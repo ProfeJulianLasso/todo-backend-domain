@@ -1,4 +1,4 @@
-import { ValueObjectExceptionInterface } from '../../interfaces';
+import { ValueObjectExceptionInterface } from '../../common';
 
 export abstract class ValueObjectBase<Type> {
   protected _error!: ValueObjectExceptionInterface;

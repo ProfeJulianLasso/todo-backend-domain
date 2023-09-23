@@ -1,5 +1,4 @@
-import { randomUUID } from 'crypto';
-import { ToDoInterface } from '../interfaces';
+import { randomUUID } from 'node:crypto';
 import {
   CompletedValueObject,
   StatusValueObject,
@@ -8,6 +7,7 @@ import {
   ToDoTitleValueObject,
 } from '../value-objects';
 import { User } from './user.entity';
+import { ToDoInterface } from '../common';
 
 export class ToDo implements ToDoInterface {
   toDoId: ToDoIdValueObject;

@@ -1,5 +1,5 @@
+import { CompleteToDoInterface, CreateToDoInterface } from '../common';
 import { ToDo } from '../entities';
-import { CompleteToDoInterface, CreateToDoInterface } from '../interfaces';
 import { AggregateBase } from './base';
 
 export class ToDoAggregate extends AggregateBase {
