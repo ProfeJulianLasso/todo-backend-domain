@@ -1,11 +1,11 @@
 {
   "jest.autoRun": "off",
-  "iridium.npm.packageManager": "npm",
+  "iridium.npm.packageManager": "pnpm",
   "files.exclude": {
     "**/node_modules": true
   },
   "explorer.fileNesting.patterns": {
-    "package.json": ".*,*.json,*.yaml,*yml,*.js,+.json,*.md,Gemfile,*.properties,*.lock,LICENSE",
+    "package.json": ".*,*.json,*.yaml,*yml,*.js,+.json,*.md,Gemfile,*.properties,*.lock,LICENSE,bun.lockb",
     "*.d.ts": "$(capture).js,$(capture).js.map",
   },
   "cSpell.ignorePaths": [
