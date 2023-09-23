@@ -1,4 +1,4 @@
-import { DomainException, ValueObjectExceptionInterface } from '../../src';
+import { DomainException, ValueObjectExceptionInterface } from '../../../src';
 
 describe('DomainException', () => {
   it('should get the message "invalid data"', () => {
