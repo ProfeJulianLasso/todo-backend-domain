@@ -2,7 +2,7 @@ import {
   UserEmailValueObject,
   UserNameValueObject,
   UserPasswordValueObject,
-} from '../value-objects';
+} from '../../value-objects';
 
 export interface CreateUserInterface {
   name: UserNameValueObject;

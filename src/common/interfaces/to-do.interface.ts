@@ -1,11 +1,11 @@
-import { User } from '../entities';
+import { User } from '../../entities';
 import {
   CompletedValueObject,
   StatusValueObject,
   ToDoDescriptionValueObject,
   ToDoIdValueObject,
   ToDoTitleValueObject,
-} from '../value-objects';
+} from '../../value-objects';
 
 export interface ToDoInterface {
   toDoId: ToDoIdValueObject;

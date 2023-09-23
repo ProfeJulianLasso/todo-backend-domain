@@ -1,9 +1,9 @@
-import { User } from '../entities';
+import { User } from '../../entities';
 import {
   ToDoDescriptionValueObject,
   ToDoIdValueObject,
   ToDoTitleValueObject,
-} from '../value-objects';
+} from '../../value-objects';
 
 export interface CreateToDoInterface {
   user: User;

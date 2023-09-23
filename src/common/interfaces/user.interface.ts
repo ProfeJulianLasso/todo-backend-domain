@@ -1,11 +1,11 @@
-import { ToDo } from '../entities';
+import { ToDo } from '../../entities';
 import {
   StatusValueObject,
   UserEmailValueObject,
   UserIdValueObject,
   UserNameValueObject,
   UserPasswordValueObject,
-} from '../value-objects';
+} from '../../value-objects';
 
 export interface UserInterface {
   userId: UserIdValueObject;
