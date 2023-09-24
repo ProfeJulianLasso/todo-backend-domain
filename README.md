@@ -25,7 +25,7 @@ NOTA: si no sabes qué es PNPM te invito a darle una oportunidad haciendo [clic 
 ### Paso 1: Clonar el repositorio
 
 ```bash
-git clone 
+git clone https://github.com/ProfeJulianLasso/todo-backend-domain.git
 ```
 
 ### Paso 2: Instalación de dependencias
@@ -60,7 +60,7 @@ pnpm install -g
 
 En mi caso el paso anterior me tocó hacerlo sólo una vez en la vida de PNPM. Luego si hacemos el siguiente paso que es propiamente para crear el enlace simbólico.
 
-NOTA: Para poder crear el enlace simbólico, usted debe de estar en la raíz del proyecto.
+**NOTA**: Para poder crear el enlace simbólico, usted debe de estar en la raíz del proyecto.
 
 ```bash
 pnpm link --global
